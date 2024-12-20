@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сучасний Магазин Одягу</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/catalog.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" style="text-decoration: none;">
+            <div class="logo">
+                <h1>StreetWear</h1>
+            </div>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/catalog.html">Товари</a></li>
+                <li><a href="/index.html">Про нас</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="cart-button" onclick="goToCartPage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                    </svg>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+    
+    <!-- <div id="cart" style="display: none; position: fixed; top: 10%; right: 10%; background: white; padding: 20px; border: 1px solid #ccc; z-index: 1000;">
+        <h3>Кошик</h3>
+        <ul id="cart-items"></ul>
+        <p>Загальна сума: <span id="cart-total">0</span> грн</p>
+        <button onclick="clearCart()">Очистити кошик</button>
+    </div> -->
+    <main>
+        <h1 style="text-align: center; padding: 20px;">Каталог одягу</h1>
+        <div class="catalog">
+            <!-- Приклад товару -->
+            <div class="item">
+                <img src="images/hu.webp" alt="Толстовка">
+                <h3>Толстовка</h3>
+                <p>М'яка та тепла толстовка для холодних днів.</p>
+                <div class="price" data-price="1200">1200 грн</div>
+                <button class="buy-button" onclick="addToCart('Толстовка', 1200)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/t-short.webp" alt="Футболка">
+                <h3>Футболка</h3>
+                <p>Класична футболка з бавовни.</p>
+                <div class="price" data-price="800">800 грн</div>
+                <button class="buy-button" onclick="addToCart('Футболка', 800)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/sh.jpg" alt="Джинси">
+                <h3>Джинси</h3>
+                <p>Стильні та зручні джинси.</p>
+                <div class="price" data-price="1500">1500 грн</div>
+                <button class="buy-button" onclick="addToCart('Джинси', 1500)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/kurtka.jpg" alt="Куртка">
+                <h3>Куртка</h3>
+                <p>Легка куртка для весни та осені.</p>
+                <div class="price" data-price="1300">1300 грн</div>
+                <button class="buy-button" onclick="addToCart('Куртка', 1300)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/sveter.jpg" alt="Светр">
+                <h3>Светр</h3>
+                <p>Теплий светр з вовни.</p>
+                <div class="price" data-price="720">720 грн</div>
+                <button class="buy-button" onclick="addToCart('Светр', 720)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/shtani.jpg" alt="Штани">
+                <h3>Штани</h3>
+                <p>Класичні штани для офісу.</p>
+                <div class="price" data-price="850">850 грн</div>
+                <button class="buy-button" onclick="addToCart('Штани', 850)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/cos.jpg" alt="Костюм">
+                <h3>Костюм</h3>
+                <p>Зручний і стильний костюм.</p>
+                <div class="price" data-price="1600">1600 грн</div>
+                <button class="buy-button" onclick="addToCart('Куртка', 1600)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/kepka.webp" alt="Кепка">
+                <h3>Кепка</h3>
+                <p>Літння кепка.</p>
+                <div class="price" data-price="550">550 грн</div>
+                <button class="buy-button" onclick="addToCart('Куртка', 550)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/palto.jpg" alt="Пальто">
+                <h3>Пальто</h3>
+                <p>Класичне та тепле пальто.</p>
+                <div class="price" data-price="2200">2200 грн</div>
+                <button class="buy-button" onclick="addToCart('Куртка',2200)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/sorochka.jpg" alt="Сорочка">
+                <h3>Сорочка</h3>
+                <p>Мінімалістична сорочкка на всі випадки життя.</p>
+                <div class="price" data-price="1100">1100 грн</div>
+                <button class="buy-button" onclick="addToCart('Куртка',1100)">Купити</button>
+            </div>
+            <div class="item">
+                <img src="images/sharf.jpg" alt="Шарф">
+                <h3>Шарф</h3>
+                <pл>Теплий зимовий шарф.</p>
+                <div class="price" data-price="950">950 грн</div>
+                <button class="buy-button" onclick="addToCart('Куртка',950)">Купити</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Кошик
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">×</span>
+            <h2>Кошик</h2>
+            <div id="cart-items"></div>
+            <div class="total">
+                <p>Загальна сума: <span id="total">0</span> грн</p>
+            </div>
+            <button onclick="clearCart()">Очистити кошик</button>
+        </div>
+    </div> -->
+
+    <footer>
+        <p>&copy; <p><strong>Ми в соцмережах:</strong></p>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="images/instagram (1).svg" alt="Instagram" width="24" height="24"> Instagram
+        </a>
+        <a href="https://t.me" target="_blank">
+            <img src="images/telegram (1).svg" alt="Telegram" width="24" height="24"> Telegram
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook.svg" alt="Facebook" width="24" height="24"> Facebook
+        </a></p>
+    </footer>
+    <script src="/JS/main.js"></script>
+</body>
+</html>

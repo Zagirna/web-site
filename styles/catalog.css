@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+.item h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+.item p {
+    margin: 0 15px 15px;
+    font-size: 14px;
+    color: #666;
+}
+.item .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+.item img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+}
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #219150;
+}
+
+.nav-cta > *{
+    margin: 0;
+}
+
+.nav-cta svg{
+    margin-left: 1rem;
+}
+
+/*  */
+/*  */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cart-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #007BFF;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-button span {
+    margin-left: 5px;
+    background: red;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/*  */
+/*  */
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cart-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item button {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+
+footer {
+    background-color: #333; /* Темний фон */
+    color: #fff; /* Білий текст */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-social-media {
+    margin-top: 10px;
+}
+
+.footer-social-media a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff; /* Білий текст для посилань */
+    font-size: 16px;
+}
+
+.footer-social-media a img {
+    margin-right: 8px;
+    filter: brightness(0) invert(1); /* Робимо іконки білими */
+}
+
+.footer-social-media a:hover {
+    color: #f0f0f0; /* Світліший відтінок тексту при наведенні */
+}

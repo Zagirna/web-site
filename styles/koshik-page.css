@@ -1,0 +1,84 @@
+.cart-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-details h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.cart-item-details p {
+    margin: 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.clear-cart-button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-cart-button:hover {
+    background-color: #ff1a1a;
+}
+
+.back-to-catalog {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.back-to-catalog:hover {
+    text-decoration: underline;
+}
+
+
+.checkmark {
+    color: green;
+    font-size: 18px;
+    margin-left: 10px;
+}
